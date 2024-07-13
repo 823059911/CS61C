@@ -8,9 +8,9 @@ There are two different ways to iterate through a string.
 int num_occurrences(char *str, char letter) {
     /* TODO: implement num_occurances */
 	int count=0;
-	while(*str!=null){
+	while(*str!='\0'){
 	    if(*str==letter){
-		ccount++;
+		count++;
 		}
 	    str++;
 	}
@@ -21,7 +21,12 @@ int num_occurrences(char *str, char letter) {
 Each sequence will end with a NULL terminator and will have up to 20 nucleotides.
 All letters will be upper case. */
 void compute_nucleotide_occurrences(DNA_sequence *dna_seq) {
-    /* TODO: implement compute_nucleotide_occurances */
-
-    return;
+	dna_seq->A_count=num_occurrences(dna_seq->sequence,'A');
+	dna_seq->G_count=num_occurrences(dna_seq->sequence,'G');
+	dna_seq->C_count=num_occurrences(dna_seq->sequence,'C');
+	dna_seq->T_count=num_occurrences(dna_seq->sequence,'T');
+ 
 }
+
+		
+
